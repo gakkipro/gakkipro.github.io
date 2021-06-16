@@ -5,10 +5,8 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
-  <link rel="stylesheet" href="/dist/css/share.min.css">
-  <script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -16,6 +14,9 @@
 
 
 
+
+
+
   
   
     
@@ -24,8 +25,9 @@
     
       
     
-  <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  <script async src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
   <link href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
 
 
 
@@ -51,38 +53,14 @@
 
 
 
+
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
+<link href="https://fonts.loli.net/css?family=EB+Garamond:400,400i,700,700i|Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
 
 
 
@@ -94,8 +72,6 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
 
@@ -103,16 +79,18 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/head.png?v=5.1.4" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
 
 
-  <meta name="keywords" content="Hexo个人博客, NexT美化" />
+  <meta name="keywords" content="博客美化" />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="匆匆过客" type="application/atom+xml" />
@@ -137,12 +115,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"flipYIn","post_header":"perspectiveRightIn","post_body":"perspectiveLeftIn","coll_header":"swoopIn","sidebar":"shrinkIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -165,6 +143,18 @@
 
 
 
+<!-- 设置文章需要密码访问 -->
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
   <title>标签: springmvc | 匆匆过客</title>
   
 
@@ -175,24 +165,23 @@
 
 
 
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
-  <!--  图片放大  -->
-  <script type="text/javascript" src="/js/src/image.js"></script>
+
   
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+      <!-- 球型气泡标签云 -->
+      <script type="text/javascript" src="/js/src/bubble.js"></script>
   
-  <script type="text/javascript" src="/js/src/instantclick.js" data-no-instant></script>
-  <script data-no-instant>InstantClick.init();</script>
+
+  
+      <!-- haoyuePlayer 播放器，移动端大小适配-->
+      <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
+
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-  <script src="/dist/js/social-share.min.js"></script>
-  <!-- 小星星 -->
-  <script type="text/javascript" src="/js/src/fairyDustCursor.js"></script>
-  <!-- 雪花特效 -->
-  <script type="text/javascript" src="/js/src/snow.js"></script>
-  <script type="text/javascript" src="/js/src/hook-duosuo.js"></script>
+
+  
+
   
   
     
@@ -201,9 +190,12 @@
   <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
+    <!--fork me from github-->
+    <a href="https://github.com/leafjame/hexo-theme-next5-leaf" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta custom-logo">
+  <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
@@ -235,7 +227,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -244,28 +236,18 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/%20" rel="section">
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
+            归档
           </a>
         </li>
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -274,12 +256,42 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            归档
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-apple"></i> <br />
+            
+            生活
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            友链
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -350,17 +362,17 @@
       
         
 
- <article class="my-post post-type-tags" itemscope itemtype="http://schema.org/Article">
-     <header class="my-post-header">
-	
-	<div class="my-post-meta">
-	  <time class="my-post-time" itemprop="dateCreated"
-			datetime="2020-03-22T13:32:00+08:00"
-			content="2020-03-22" >
-		03-22
-	  </time>
-	</div>
-	
+  <article class="my-post post-type-tags" itemscope itemtype="http://schema.org/Article">
+    <header class="my-post-header">
+
+      <div class="my-post-meta">
+        <time class="my-post-time" itemprop="dateCreated"
+              datetime="2020-03-22T13:32:00+08:00"
+              content="2020-03-22" >
+          03-22
+        </time>
+      </div>
+
       <h3 class="my-post-title">
         
             <a class="my-post-title-link" href="/2020/03/22/SpringMVC/" itemprop="url">
@@ -370,8 +382,6 @@
             </a>
         
       </h3>
-
-      
 
     </header>
   </article>
@@ -394,11 +404,12 @@
 
           
 
+
+
         </div>
         
           
   
-
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
       <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -408,6 +419,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -419,69 +432,25 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <a href="/">
               <img class="site-author-image" itemprop="image"
-                src="/images/head.png"
+                src="/images/tt.jpg"
                 alt="gakki" />
+              </a>
             
               <p class="site-author-name" itemprop="name">gakki</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
-
-
-          <div id="binft"></div>
-  <script>
-    var binft = function (r) {
-      function t() {
-        return b[Math.floor(Math.random() * b.length)]
-      }  
-      function e() {
-        return String.fromCharCode(94 * Math.random() + 33)
-      }
-      function n(r) {
-        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-          var l = document.createElement("span");
-          l.textContent = e(), l.style.color = t(), n.appendChild(l)
-        }
-        return n
-      }
-      function i() {
-        var t = o[c.skillI];
-        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
-      }
-      var l = "",
-      o = ["只要是你，迟一点也没关系。", "世事如诗，偏爱你这一句。","延长白天，最好的办法就是从", "晚上偷几个小时。","假如遇到烦心事，就盖好被子","呼呼大睡。"].map(function (r) {
-      return r + ""
-      }),
-      a = 2,
-      g = 1,
-      s = 5,
-      d = 75,
-      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
-      c = {
-        text: "",
-        prefixP: -s,
-        skillI: 0,
-        skillP: 0,
-        direction: "forward",
-        delay: a,
-        step: g
-      };
-      i()
-      };
-      binft(document.getElementById('binft'));
-  </script>
-
-
 
           <nav class="site-state motion-element">
 
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">日志</span>
+                  <span class="site-state-item-name">文章</span>
                 </a>
               </div>
             
@@ -516,677 +485,447 @@
                 <i class="fa fa-rss"></i>
                 RSS
               </a>
+              <!-- 为Hexo Next主题添加哈林摇特效  -->
+              <a title="收藏到书签，偶尔High一下^_^" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:void(0)" onclick="javascript:(function go() {function c() {var e = document.createElement('link');e.setAttribute('type', 'text/css');e.setAttribute('rel', 'stylesheet');e.setAttribute('href', f);e.setAttribute('class', l);document.body.appendChild(e)}function h(){var e = document.getElementsByClassName(l);for(var t = 0; t< e.length; t++){document.body.removeChild(e[t])}}function p(){var e = document.createElement('div');e.setAttribute('class', a);document.body.appendChild(e);setTimeout(function(){document.body.removeChild(e)},100)}function d(e){return{height:e.offsetHeight,width:e.offsetWidth}}function v(i){var s = d(i);return s.height>e &amp;&amp;s.height<n &amp;&amp; s.width>t &amp;&amp;s.width<r}function m(e){var t=e;var n=0;while(!!t){n+=t.offsetTop;t=t.offsetParent}return n}function g(){var e=document.documentElement;if(!!window.innerWidth){return window.innerHeight}else if(e &amp;&amp; !isNaN(e.clientHeight)){return e.clientHeight}return 0}function y(){if(window.pageYOffset){return window.pageYOffset}return Math.max(document.documentElement.scrollTop,document.body.scrollTop)}function E(e){var t=m(e);return t>=w &amp;&amp; t<=b+w}var songs=['https://www.liaofuzhan.com/music/无尽光芒.mp3'];function S(){var e=document.getElementById('audio_element_id');if(e!=null){var index=parseInt(e.getAttribute('curSongIndex'));if(index>songs.length-2){index=0;}else{index++;}e.setAttribute('curSongIndex',index);N();}e.src=i;e.play()}function x(e){e.className+=' '+s+' '+o}function T(e){e.className+=' '+s+' '+u[Math.floor(Math.random()*u.length)]}function N(){var e=document.getElementsByClassName(s);var t=new RegExp('\\b'+s+'\\b');for(var n=0;n<e.length;){e[n].className=e[n].className.replace(t,'')}}function initAudioEle(){var e=document.getElementById('audio_element_id');if(e===null){e=document.createElement('audio');e.setAttribute('class',l);e.setAttribute('curSongIndex',0);e.id='audio_element_id';e.loop=false;e.bgcolor=0;e.addEventListener('canplay',function(){setTimeout(function(){x(k)},500);setTimeout(function(){N();p();for(var e=0;e<O.length;e++){T(O[e])}},15500)},true);e.addEventListener('ended',function(){N();h();go();},true);e.innerHTML='<p>If you are reading this,it is because your browser does not support the audio element. We recommend that you get a new browser.</p><p>';document.body.appendChild(e);}}initAudioEle();var e=30;var t=30;var n=350;var r=350;var curSongIndex=parseInt(document.getElementById('audio_element_id').getAttribute('curSongIndex'));var i=songs[curSongIndex];var s='mw-harlem_shake_me';var o='im_first';var u=['im_drunk','im_baked','im_trippin','im_blown'];var a='mw-strobe_light';var f='https://s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css';var l='mw_added_css';var b=g();var w=y();var C=document.getElementsByTagName('*');var k=null;for(var L=0;L<C.length;L++){var A=C[L];if(v(A)){if(E(A)){k=A;break}}}if(A===null){console.warn('Could not find a node of the right size. Please try a different page.');return}c();S();var O=[];for(var L=0;L<C.length;L++){var A=C[L];if(v(A)){O.push(A)}}})()"><i class="fa fa-music"></i> High~</a>
+
             </div>
           
-
-          
-            <div class="high">
-              <a title="收藏到书签，偶尔High一下^_^" rel="alternate" class="mw-harlem_shake_slow wobble shake" href='javascript:(function() {
-    function c() {
-        var e = document.createElement("link");
-        e.setAttribute("type", "text/css");
-        e.setAttribute("rel", "stylesheet");
-        e.setAttribute("href", f);
-        e.setAttribute("class", l);
-        document.body.appendChild(e)
-    }
- 
-    function h() {
-        var e = document.getElementsByClassName(l);
-        for (var t = 0; t < e.length; t++) {
-            document.body.removeChild(e[t])
-        }
-    }
- 
-    function p() {
-        var e = document.createElement("div");
-        e.setAttribute("class", a);
-        document.body.appendChild(e);
-        setTimeout(function() {
-            document.body.removeChild(e)
-        }, 100)
-    }
- 
-    function d(e) {
-        return {
-            height : e.offsetHeight,
-            width : e.offsetWidth
-        }
-    }
- 
-    function v(i) {
-        var s = d(i);
-        return s.height > e && s.height < n && s.width > t && s.width < r
-    }
- 
-    function m(e) {
-        var t = e;
-        var n = 0;
-        while (!!t) {
-            n += t.offsetTop;
-            t = t.offsetParent
-        }
-        return n
-    }
- 
-    function g() {
-        var e = document.documentElement;
-        if (!!window.innerWidth) {
-            return window.innerHeight
-        } else if (e && !isNaN(e.clientHeight)) {
-            return e.clientHeight
-        }
-        return 0
-    }
- 
-    function y() {
-        if (window.pageYOffset) {
-            return window.pageYOffset
-        }
-        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
-    }
- 
-    function E(e) {
-        var t = m(e);
-        return t >= w && t <= b + w
-    }
- 
-    function S() {
-        var e = document.createElement("audio");
-        e.setAttribute("class", l);
-        e.src = i;
-        e.loop = false;
-        e.addEventListener("canplay", function() {
-            setTimeout(function() {
-                x(k)
-            }, 500);
-            setTimeout(function() {
-                N();
-                p();
-                for (var e = 0; e < O.length; e++) {
-                    T(O[e])
-                }
-            }, 15500)
-        }, true);
-        e.addEventListener("ended", function() {
-            N();
-            h()
-        }, true);
-        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
-        document.body.appendChild(e);
-        e.play()
-    }
- 
-    function x(e) {
-        e.className += " " + s + " " + o
-    }
- 
-    function T(e) {
-        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
-    }
- 
-    function N() {
-        var e = document.getElementsByClassName(s);
-        var t = new RegExp("\\b" + s + "\\b");
-        for (var n = 0; n < e.length; ) {
-            e[n].className = e[n].className.replace(t, "")
-        }
-    }
- 
-    var e = 30;
-    var t = 30;
-    var n = 350;
-    var r = 350;
-    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
-    var s = "mw-harlem_shake_me";
-    var o = "im_first";
-    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
-    var a = "mw-strobe_light";
-    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
-    var l = "mw_added_css";
-    var b = g();
-    var w = y();
-    var C = document.getElementsByTagName("*");
-    var k = null;
-    for (var L = 0; L < C.length; L++) {
-        var A = C[L];
-        if (v(A)) {
-            if (E(A)) {
-                k = A;
-                break
-            }
-        }
-    }
-    if (A === null) {
-        console.warn("Could not find a node of the right size. Please try a different page.");
-        return
-    }
-    c();
-    S();
-    var O = [];
-    for (var L = 0; L < C.length; L++) {
-        var A = C[L];
-        if (v(A)) {
-            O.push(A)
-        }
-    }
-})()'><i class="fa fa-music"></i> High</a>
-            </div>
-          
-
-
-
 
           
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
-                    <a href="https://github.com/erke1/erke1.github.io" target="_blank" title="GitHub">
+                    <a rel="external nofollow" href="https://github.com/gakkipro" target="_blank" title="GitHub">
                       
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                        <i class="fa fa-fw fa-github"></i></a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://blog.csdn.net/qq_43658309" target="_blank" title="CSDN">
+                    <a rel="external nofollow" href="mailto:erkepro1@gmail.com" target="_blank" title="E-Mail">
                       
-                        <i class="fa fa-fw fa-cc"></i>CSDN</a>
+                        <i class="fa fa-fw fa-envelope"></i></a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="/images/QQ.png" target="_blank" title="QQ">
+                    <a rel="external nofollow" href="https://www.facebook.com" target="_blank" title="Facebook">
                       
-                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                        <i class="fa fa-fw fa-facebook"></i></a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="mailto:leaf2208446598@gmail.com" target="_blank" title="E-Mail">
+                    <a rel="external nofollow" href="https://twitter.com/Leafjame" target="_blank" title="Witter">
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                        <i class="fa fa-fw fa-twitter"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="https://youtube.com" target="_blank" title="YouTube">
+                      
+                        <i class="fa fa-fw fa-youtube"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a rel="external nofollow" href="https://www.jianshu.com" target="_blank" title="Jianshu">
+                      
+                        <i class="fa fa-fw fa-instagram"></i></a>
                   </span>
                 
             </div>
           
 
+            <!--
+            <div id="music163player">
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1336790004&auto=1&height=66"></iframe>
+            </div>
+            -->
+
           
           
 
           
           
+
+          <!--近期文章版块 began-->
           
-<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-<div class="widget-wrap">
-    <h3 class="widget-title"></h3>
-    <div id="myCanvasContainer" class="widget tagcloud">
-        <canvas width="250" height="250" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-Boot/" rel="tag">Spring Boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/" rel="tag">spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springmvc/" rel="tag">springmvc</a><span class="tag-list-count">1</span></li></ul>
-        </canvas>
-    </div>
+              <div class="links-of-blogroll motion-element links-of-blogroll-block">
+                <div class="links-of-blogroll-title">
+                  <i class="fa fa-history fa-" aria-hidden="true"></i>
+                  近期文章
+                </div>
+                <ul class="links-of-blogroll-list">
+                  
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/2020/03/22/Spring%20Boot/" title="Spring Boot 基础" target="_blank">Spring Boot 基础</a>
+                    </li>
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/2020/03/22/C/" title="c" target="_blank">c</a>
+                    </li>
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/2020/03/22/Mybatis/" title="mybatis" target="_blank">mybatis</a>
+                    </li>
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/2020/03/22/Mysql/" title="mysql" target="_blank">mysql</a>
+                    </li>
+                  
+                    <li class='my-links-of-blogroll-li'>
+                      <a href="/2020/03/22/SpringMVC/" title="springmvc" target="_blank">springmvc</a>
+                    </li>
+                  
+                </ul>
+              </div>
+          
+          <!--近期文章版块 end-->
+
+          
+              <!-- canvas粒子时钟 -->
+              <!-- canvas粒子时钟 https://www.cnblogs.com/xiaohuochai/p/6368039.html
+  https://www.html5tricks.com/html5-canvas-dance-time.html
+ -->
+<div id="">
+  <canvas id="canvas" style="width:60%;">
 </div>
+<script async>
+(function(){
+  var WINDOW_WIDTH = 820;
+  		var WINDOW_HEIGHT = 250;
+  		var RADIUS = 7; //球半径
+  		var NUMBER_GAP = 10; //数字之间的间隙
+  		var u=0.65; //碰撞能量损耗系数
+  		var context; //Canvas绘制上下文
+  		var balls = []; //存储彩色的小球
+  		const colors = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"]; //彩色小球的颜色
+  		var currentNums = []; //屏幕显示的8个字符
+  		var digit =
+                  [
+                      [
+                          [0,0,1,1,1,0,0],
+                          [0,1,1,0,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,0,1,1,0],
+                          [0,0,1,1,1,0,0]
+                      ],//0
+                      [
+                          [0,0,0,1,1,0,0],
+                          [0,1,1,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [1,1,1,1,1,1,1]
+                      ],//1
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,1,1,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,1,1,1,1,1]
+                      ],//2
+                      [
+                          [1,1,1,1,1,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,1,0,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//3
+                      [
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,1,0],
+                          [0,0,1,1,1,1,0],
+                          [0,1,1,0,1,1,0],
+                          [1,1,0,0,1,1,0],
+                          [1,1,1,1,1,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,1,1]
+                      ],//4
+                      [
+                          [1,1,1,1,1,1,1],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,1,1,1,1,0],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//5
+                      [
+                          [0,0,0,0,1,1,0],
+                          [0,0,1,1,0,0,0],
+                          [0,1,1,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//6
+                      [
+                          [1,1,1,1,1,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0]
+                      ],//7
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//8
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,1,1,0,0,0,0]
+                      ],//9
+                      [
+                          [0,0,0,0],
+                          [0,0,0,0],
+                          [0,1,1,0],
+                          [0,1,1,0],
+                          [0,0,0,0],
+                          [0,0,0,0],
+                          [0,1,1,0],
+                          [0,1,1,0],
+                          [0,0,0,0],
+                          [0,0,0,0]
+                      ]//:
+                  ];
 
+  		function drawDatetime(cxt){
+  			var nums = [];
+
+  			context.fillStyle="#005eac"
+  			var date = new Date();
+  			var offsetX = 70, offsetY = 30;
+  			var hours = date.getHours();
+  			var num1 = Math.floor(hours/10);
+  			var num2 = hours%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+  			nums.push({num: 10}); //冒号
+  			var minutes = date.getMinutes();
+  			var num1 = Math.floor(minutes/10);
+  			var num2 = minutes%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+  			nums.push({num: 10}); //冒号
+  			var seconds = date.getSeconds();
+  			var num1 = Math.floor(seconds/10);
+  			var num2 = seconds%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+
+  			for(var x = 0;x<nums.length;x++){
+  				nums[x].offsetX = offsetX;
+  				offsetX = drawSingleNumber(offsetX,offsetY, nums[x].num,cxt);
+  				//两个数字连一块，应该间隔一些距离
+  				if(x<nums.length-1){
+  					if((nums[x].num!=10) &&(nums[x+1].num!=10)){
+  						offsetX+=NUMBER_GAP;
+  					}
+  				}
+  			}
+
+  			//说明这是初始化
+  			if(currentNums.length ==0){
+  				currentNums = nums;
+  			}else{
+  				//进行比较
+  				for(var index = 0;index<currentNums.length;index++){
+  					if(currentNums[index].num!=nums[index].num){
+  						//不一样时，添加彩色小球
+  						addBalls(nums[index]);
+  						currentNums[index].num=nums[index].num;
+  					}
+  				}
+  			}
+  			renderBalls(cxt);
+  			updateBalls();
+
+  			return date;
+  		}
+
+  		function addBalls (item) {
+  			var num = item.num;
+  			var numMatrix = digit[num];
+  			for(var y = 0;y<numMatrix.length;y++){
+  				for(var x = 0;x<numMatrix[y].length;x++){
+  					if(numMatrix[y][x]==1){
+  						var ball={
+  							offsetX:item.offsetX+RADIUS+RADIUS*2*x,
+  							offsetY:30+RADIUS+RADIUS*2*y,
+  							color:colors[Math.floor(Math.random()*colors.length)],
+  							g:1.5+Math.random(),
+  							vx:Math.pow(-1, Math.ceil(Math.random()*10))*4+Math.random(),
+  							vy:-5
+  						}
+  						balls.push(ball);
+  					}
+  				}
+  			}
+  		}
+
+  		function renderBalls(cxt){
+  			for(var index = 0;index<balls.length;index++){
+  				cxt.beginPath();
+  				cxt.fillStyle=balls[index].color;
+  				cxt.arc(balls[index].offsetX, balls[index].offsetY, RADIUS, 0, 2*Math.PI);
+  				cxt.fill();
+  			}
+  		}
+
+  		function updateBalls () {
+  			var i =0;
+  			for(var index = 0;index<balls.length;index++){
+  				var ball = balls[index];
+  				ball.offsetX += ball.vx;
+  				ball.offsetY += ball.vy;
+  				ball.vy+=ball.g;
+  				if(ball.offsetY > (WINDOW_HEIGHT-RADIUS)){
+  					ball.offsetY= WINDOW_HEIGHT-RADIUS;
+  					ball.vy=-ball.vy*u;
+  				}
+  				if(ball.offsetX>RADIUS&&ball.offsetX<(WINDOW_WIDTH-RADIUS)){
+
+  					balls[i]=balls[index];
+  					i++;
+  				}
+  			}
+  			//去除出边界的球
+  			for(;i<balls.length;i++){
+  				balls.pop();
+  			}
+  		}
+  		function drawSingleNumber(offsetX, offsetY, num, cxt){
+  			var numMatrix = digit[num];
+  			for(var y = 0;y<numMatrix.length;y++){
+  				for(var x = 0;x<numMatrix[y].length;x++){
+  					if(numMatrix[y][x]==1){
+  						cxt.beginPath();
+  						cxt.arc(offsetX+RADIUS+RADIUS*2*x,offsetY+RADIUS+RADIUS*2*y,RADIUS,0,2*Math.PI);
+  						cxt.fill();
+  					}
+  				}
+  			}
+  			cxt.beginPath();
+  			offsetX += numMatrix[0].length*RADIUS*2;
+  			return offsetX;
+  		}
+
+  		var canvas = document.getElementById("canvas");
+  		canvas.width=WINDOW_WIDTH;
+  		canvas.height=WINDOW_HEIGHT;
+  		context = canvas.getContext("2d");
+
+  		//记录当前绘制的时刻
+  		var currentDate = new Date();
+
+  		setInterval(function(){
+  			//清空整个Canvas，重新绘制内容
+  			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+  			drawDatetime(context);
+  		}, 50)
+})();
+</script>
+
+          
+          
 
         </div>
       </section>
 
       
-      <div id="binft"></div>
-  <script>
-    var binft = function (r) {
-      function t() {
-        return b[Math.floor(Math.random() * b.length)]
-      }  
-      function e() {
-        return String.fromCharCode(94 * Math.random() + 33)
-      }
-      function n(r) {
-        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-          var l = document.createElement("span");
-          l.textContent = e(), l.style.color = t(), n.appendChild(l)
-        }
-        return n
-      }
-      function i() {
-        var t = o[c.skillI];
-        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
-      }
-      var l = "",
-      o = ["只要是你，迟一点也没关系。", "世事如诗，偏爱你这一句。","延长白天，最好的办法就是从", "晚上偷几个小时。","假如遇到烦心事，就盖好被子","呼呼大睡。"].map(function (r) {
-      return r + ""
-      }),
-      a = 2,
-      g = 1,
-      s = 5,
-      d = 75,
-      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
-      c = {
-        text: "",
-        prefixP: -s,
-        skillI: 0,
-        skillP: 0,
-        direction: "forward",
-        delay: a,
-        step: g
-      };
-      i()
-      };
-      binft(document.getElementById('binft'));
-  </script>
-
-      <div style="">
-  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
-</div>
-<script>
-(function(){
-
-   var digit=
-    [
-        [
-            [0,0,1,1,1,0,0],
-            [0,1,1,0,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,0,1,1,0],
-            [0,0,1,1,1,0,0]
-        ],//0
-        [
-            [0,0,0,1,1,0,0],
-            [0,1,1,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [1,1,1,1,1,1,1]
-        ],//1
-        [
-            [0,1,1,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,0,0],
-            [0,0,1,1,0,0,0],
-            [0,1,1,0,0,0,0],
-            [1,1,0,0,0,0,0],
-            [1,1,0,0,0,1,1],
-            [1,1,1,1,1,1,1]
-        ],//2
-        [
-            [1,1,1,1,1,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,0,0,1,1,0],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0]
-        ],//3
-        [
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,1,0],
-            [0,0,1,1,1,1,0],
-            [0,1,1,0,1,1,0],
-            [1,1,0,0,1,1,0],
-            [1,1,1,1,1,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,0,1,1,0],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,1,1]
-        ],//4
-        [
-            [1,1,1,1,1,1,1],
-            [1,1,0,0,0,0,0],
-            [1,1,0,0,0,0,0],
-            [1,1,1,1,1,1,0],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0]
-        ],//5
-        [
-            [0,0,0,0,1,1,0],
-            [0,0,1,1,0,0,0],
-            [0,1,1,0,0,0,0],
-            [1,1,0,0,0,0,0],
-            [1,1,0,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0]
-        ],//6
-        [
-            [1,1,1,1,1,1,1],
-            [1,1,0,0,0,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,0,0],
-            [0,0,0,1,1,0,0],
-            [0,0,1,1,0,0,0],
-            [0,0,1,1,0,0,0],
-            [0,0,1,1,0,0,0],
-            [0,0,1,1,0,0,0]
-        ],//7
-        [
-            [0,1,1,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,1,1,0]
-        ],//8
-        [
-            [0,1,1,1,1,1,0],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [1,1,0,0,0,1,1],
-            [0,1,1,1,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,0,1,1],
-            [0,0,0,0,1,1,0],
-            [0,0,0,1,1,0,0],
-            [0,1,1,0,0,0,0]
-        ],//9
-        [
-            [0,0,0,0,0,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,1,1,1,0,0],
-            [0,0,0,0,0,0,0]
-        ]//:
-    ];
-
-var canvas = document.getElementById('canvas');
-
-if(canvas.getContext){
-    var cxt = canvas.getContext('2d');
-    //声明canvas的宽高
-    var H = 100,W = 700;
-    canvas.height = H;
-    canvas.width = W;
-    cxt.fillStyle = '#f00';
-    cxt.fillRect(10,10,50,50);
-
-    //存储时间数据
-    var data = [];
-    //存储运动的小球
-    var balls = [];
-    //设置粒子半径
-    var R = canvas.height/20-1;
-    (function(){
-        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
-        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
-        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
-    })();
-
-    /*生成点阵数字*/
-    function renderDigit(index,num){
-        for(var i = 0; i < digit[num].length; i++){
-            for(var j = 0; j < digit[num][i].length; j++){
-                if(digit[num][i][j] == 1){
-                    cxt.beginPath();
-                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
-                    cxt.closePath();
-                    cxt.fill();
-                }
-            }
-        }
-    }
-
-    /*更新时钟*/
-    function updateDigitTime(){
-        var changeNumArray = [];
-        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
-        var NewData = [];
-        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
-        for(var i = data.length-1; i >=0 ; i--){
-            //时间发生变化
-            if(NewData[i] !== data[i]){
-                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
-                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
-            }
-        }
-        //增加小球
-        for(var i = 0; i< changeNumArray.length; i++){
-            addBalls.apply(this,changeNumArray[i].split('_'));
-        }
-        data = NewData.concat();
-    }
-
-    /*更新小球状态*/
-    function updateBalls(){
-        for(var i = 0; i < balls.length; i++){
-            balls[i].stepY += balls[i].disY;
-            balls[i].x += balls[i].stepX;
-            balls[i].y += balls[i].stepY;
-            if(balls[i].x > W + R || balls[i].y > H + R){
-                balls.splice(i,1);
-                i--;
-            }
-        }
-    }
-
-    /*增加要运动的小球*/
-    function addBalls(index,num){
-        var numArray = [1,2,3];
-        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
-        for(var i = 0; i < digit[num].length; i++){
-            for(var j = 0; j < digit[num][i].length; j++){
-                if(digit[num][i][j] == 1){
-                    var ball = {
-                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
-                        y:i*2*(R+1)+(R+1),
-                        stepX:Math.floor(Math.random() * 4 -2),
-                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
-                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
-                        disY:1
-                    };
-                    balls.push(ball);
-                }
-            }
-        }
-    }
-
-    /*渲染*/
-    function render(){
-        //重置画布宽度，达到清空画布的效果
-        canvas.height = 100;
-        //渲染时钟
-        for(var i = 0; i < data.length; i++){
-            renderDigit(i,data[i]);
-        }
-        //渲染小球
-        for(var i = 0; i < balls.length; i++){
-            cxt.beginPath();
-            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
-            cxt.fillStyle = balls[i].color;
-            cxt.closePath();
-            cxt.fill();
-        }
-    }
-
-    clearInterval(oTimer);
-    var oTimer = setInterval(function(){
-        //更新时钟
-        updateDigitTime();
-        //更新小球状态
-        updateBalls();
-        //渲染
-        render();
-    },50);
-}
-
-})();
-</script>
-
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-      <!-- require MetingJS -->
-      <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-      <meting-js
-      	server="netease"
-      	type="playlist"
-      	id="583570754"
-        list-folded="true">
-      </meting-js>
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
+
       
+
+      <!-- 标签云 -->
+      <!--
+      
+      <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+      <div class="widget-wrap">
+      <h3 class="widget-title">Tag Cloud</h3>
+      <div id="myCanvasContainer" class="widget tagcloud">
+          <canvas width="250" height="250" id="resCanvas" style="width=100%">
+              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-Boot/" rel="tag">Spring Boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/" rel="tag">spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springmvc/" rel="tag">springmvc</a><span class="tag-list-count">1</span></li></ul>
+          </canvas>
+      </div>
+      </div>
+      
+      -->
+      <!-- 标签云 -->
 
     </div>
-
   </aside>
 
 
         
       </div>
-	  
-	   <!-- 文章加密 此处为新加的代码 -->
-	   <script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
-<script>
-    //暂时储存文章中的内容
-    var div = $('.post-body');
-    //暂时储存目录的内容
-    var toc=$('.post-toc')
-    function password() {
-        if(''){
-            //将文章内容删除
-            div.remove();
-            //将目录删除
-            toc.remove();
-            //将文章删除后，向原来文章的地方添加，应该出现的提示用户输入密码的样式
-            //下面这里的第一个用textarea是因为如果在手机端的时候只能显示一部分文字，
-            //只是拓展:input里面的字只能显示一行，不会自动换行，目前上网搜索没有发现好的办法，所以用了textarea，右下角的小三角通过resize:none 去掉。
-            $('.post-header').after(
-            '<span class="description" value="请输入文章密码，然后按 Enter 键阅读" style="font-style: oblique;font-weight: bold;border: none;display: block;'+
-            'width: 50%;margin: 0 auto;text-align: center;outline: none;margin-bottom: 40px;resize:none ">'+
-            '<i class="fa fa-heartbeat" id="myheartbeat"></i>'+
-            '请输入文章密码，然后按 Enter 键阅读' +
-            '<i class="fa fa-heartbeat" id="myheartbeat"></i>'+
-            '</span>' +
-            '<div class="qiang" style="height: 100px;width: 60%;margin:0 auto">' +
-            '<input class="password"  type="password" autocomplete="new-password" autofocus="autofocus" value="" style="border-radius: 5px;height: 30px;border: none;display: block;border-bottom: 1px solid #ccc;' +
-            'margin: 0 auto;outline: none;width:95%"/>' +
-            '</div>')
-            //绑定点击事件，如果是点击的.password 这个div就改变样式，如果是document中除了div之外的其他任何元素，就变回原来的样式。
-            document.onclick = function (event) {
-                var e = event || window.event;
-                var elem = e.srcElement || e.target;
-
-                while (elem) {
-                    if (elem != document) {
-                        if (elem.className == "password") {
-                            //$(".password").animate({paddingTop:"30px",width:"100%",borderWidth:"2px"},300)
-                            return;
-                        }
-                        elem = elem.parentNode;
-                    } else {
-                        //$(".password").animate({paddingTop:"0px",width:"95%",borderWidth:"1px"},300)
-                        return;
-                    }
-                }
-            }
-            //绑定enter键按下后离开的事件
-            $(document).keyup(function(event){
-                if(event.keyCode ==13&&$('.password').length>0){
-                    //console.log($('.password').val())
-                    //console.log('')
-                    if ($('.password').val() == '') {
-                        //恢复文章内容
-                        (div).appendTo($(".post-header"))
-                        //恢复目录
-                        toc.appendTo($(".sidebar-inner"))
-                        //删除本页面的输入密码组件
-                        $(".description").remove();
-                        $(".qiang").remove();
-                        $(".password").remove();
-
-                        //重新处理pjax事件,如果没有加pjax的从下面这行起到下面的else之间的代码需要去掉。
-                        //图片懒加载，没有加入此功能的这个函数需要去掉
-                        $('img').lazyload({
-                            placeholder: '/images/loading.gif',
-                            effect: 'fadeIn',
-                            threshold : 100,
-                            failure_limit : 20,
-                            skip_invisible : false
-                        });
-                        //pjax后出现文章不显示，没有pjax的下面四行需要去掉
-                        $(".post-block").css({opacity:1});
-                        $(".post-header").css({opacity:1});
-                        $(".post-body").css({opacity:1});
-                        $(".pagination").css({opacity:1});
-                    }else {
-                        alert("对不起，密码输入错误。")
-                    }
-                }
-                //将document的keyup移除，防止在pjax的情况下会重复绑定事件
-            });
-        }
-    }
-    password();
-</script>
     </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2021</span>
-  <span class="with-love" id="heart">
-    <i class="fa fa-heart"></i>
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2020 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+       <i class="fa fa-heartbeat"></i>
   </span>
-  <span class="" >
-  <span class="author" itemprop="copyrightHolder">gakki</span>
-  <span id="timeDate">载入天数...</span>
-  <span id="times">载入时分秒...</span>
-  <script>
-      var now = new Date();
-      function createtime() {
-      var grt= new Date("02/14/2018 12:49:00");
-      //此处修改你的建站时间或者网站上线时间
-      now.setTime(now.getTime()+250);
-      days = (now - grt ) / 1000 / 60 / 60 / 24;
-      dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
-      hnum = Math.floor(hours);
-      if(String(hnum).length ==1 ){
-          hnum = "0" + hnum;
-      }
-      minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-      mnum = Math.floor(minutes); if(String(mnum).length ==1 )
-      {
-         mnum = "0" + mnum;
-      }
-      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-      snum = Math.round(seconds);
-      if(String(snum).length ==1 ){snum = "0" + snum;}
-      document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
-      document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-  }
-      setInterval("createtime()",250);
-  </script>
-
+  <!--
+    <span class="author" itemprop="copyrightHolder"> &nbsp;gakki</span>
+  -->
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="Site words total count">20.7k</span>
   
 </div>
 
@@ -1195,34 +934,47 @@ if(canvas.getContext){
 
 
 
-  <span class="post-meta-divider"></span>
 
 
 
-  
 
 
+
+  <div class="subscribe-box">
+    <div class="subscribe-menu">
+      <div class="subscribe-hover">
+        <div class="subscribe-description">微信扫一扫，关注公众号</div>
+      </div>
+    </div>
+  </div>
 
 
         
 <div class="busuanzi-count">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!--
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+   
 
   
-    <span class="site-uv">
-      <i class="fa fa-user"></i>访问人数
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      次
-    </span>
+  
+    
+      <span class="site-uv">
+        
+        我的第 <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 位朋友，
+      </span>
+    
+
+    
+      <span class="site-pv">
+        历经 <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次回眸才与你相遇
+        <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      </span>
+    
   
 
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>总访问量
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      次
-    </span>
-  
 </div>
 
 
@@ -1236,6 +988,7 @@ if(canvas.getContext){
       </div>
     </footer>
 
+    
     
 
     
@@ -1261,15 +1014,15 @@ if(canvas.getContext){
   
 
 
+
+
+
+
+
+
+
+
   
-
-
-
-
-
-
-
-
 
 
 
@@ -1305,7 +1058,7 @@ if(canvas.getContext){
 
   
   
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+    <script id="ribbon" type="text/javascript" size="60" alpha="0.1"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   
 
 
@@ -1368,27 +1121,8 @@ if(canvas.getContext){
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/valine/1.3.4/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'isNUYuopHY9rcyEYcNDbuSkr-gzGzoHsz',
-        appKey: 'dgKjifyKgcPygEp64qpOIPsu',
-        placeholder: '请留下昵称和邮箱哈~邮箱不会被公布的呢',
-        avatar:'wavatar',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
+
+
 
 
 
@@ -1744,6 +1478,275 @@ if(canvas.getContext){
   
 
   
+
+
+  <!-- Tidio 在线联系功能、鼠标点击特效、页面反馈...-->
+  
+
+
+  
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+    <script async src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script async src="/js/cursor/explosion.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/src/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = true;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+
+
+
+
+
+  <script async language="javascript">
+
+    var div = document.createElement("div");
+    //插入到自定义的theme-info或者copyright之后
+    var copyright = document.querySelector(".theme-info2") || document.querySelector(".copyright");
+
+    function show_run_time(){
+        window.setTimeout("show_run_time()", 1000);
+      // BirthDay=new Date("08/07/2019 20:00:00");
+        BirthDay=new Date("08/07/2019 20:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+
+        // 使用zh-Hans.yml的文字替换
+        div.innerHTML = "我已在此等候你 " + "<span style='color: #1890ff'> " + daysold + " </span> 天 <span style='color: #1890ff'>" + hrsold + " </span>时 <span style='color: #1890ff'>" + minsold + " </span>分 <span style='color: #1890ff'>" + seconds + " </span>秒 ";
+
+        document.querySelector(".footer-inner").insertBefore(div, copyright.nextSibling);
+
+    }
+    function setzero(i){
+        if (i<10)
+        {i="0" + i};
+        return i;
+    }
+
+    show_run_time();
+
+  </script>
+
+
+
+
+<!-- 旋转魔方 -->
+
+   
+      
+<style>
+    .cube_container {
+      width: 50px;
+      height: 60px;
+      margin: 0 auto;
+      position: fixed;
+      z-index: 999;
+      -webkit-perspective: 1000px;
+              perspective: 1000px;
+      right: 0px;
+      bottom: 0px;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+
+    .cube {
+      /*
+      width: 100%;
+      height: 100%;
+      */
+      width: 0%; /* 大角度旋转 */
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform: rotateX(-15deg) rotateY(-20deg) translateZ(-100px);
+      transform: rotateX(-15deg) rotateY(-20deg) translateZ(-100px);
+      -webkit-transform-origin: center center -100px;
+      transform-origin: center center -100px;
+      -webkit-animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
+      animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
+    }
+    .cube div {
+      width: 50px;
+      height: 50px;
+      display: block;
+      margin: 0;
+      position: absolute;
+    }
+    .cube div a {
+      color: white;
+      font-size: 12px;
+      text-decoration: none;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 45%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+    .cube .front {
+      -webkit-transform: rotateY(0deg) translateZ(25px);
+              transform: rotateY(0deg) translateZ(25px);
+      background-color: rgba(0, 191, 255, 0.7);
+      border: 1px solid rgba(0, 191, 255, 0.7);
+    }
+    .cube .back {
+      -webkit-transform: rotateX(180deg) translateZ(25px);
+              transform: rotateX(180deg) translateZ(25px);
+      background-color: rgba(124, 252, 0, 0.7);
+      border: 1px solid rgba(124, 252, 0, 0.7);
+    }
+    .cube .left {
+      -webkit-transform: rotateY(-90deg) translateZ(25px);
+              transform: rotateY(-90deg) translateZ(25px);
+      background-color: rgba(255, 215, 0, 0.7);
+      border: 1px solid rgba(255, 215, 0, 0.7);
+    }
+    .cube .right {
+      -webkit-transform: rotateY(90deg) translateZ(25px);
+              transform: rotateY(90deg) translateZ(25px);
+      background-color: rgba(255, 69, 0, 0.7);
+      border: 1px solid rgba(255, 69, 0, 0.7);
+    }
+    .cube .top {
+      -webkit-transform: rotateX(90deg) translateZ(25px);
+              transform: rotateX(90deg) translateZ(25px);
+      background-color: rgba(255, 0, 157, 0.7);
+      border: 1px solid rgba(255, 0, 157, 0.7);
+    }
+    .cube .bottom {
+      -webkit-transform: rotateX(-90deg) translateZ(25px);
+              transform: rotateX(-90deg) translateZ(25px);
+      background-color: rgba(184, 111, 220, 0.7);
+      border: 1px solid rgba(184, 111, 220, 0.7);
+    }
+
+     @-webkit-keyframes around {
+      100% {
+        -webkit-transform: rotateX(-15deg) rotateY(-380deg) translateZ(-100px);
+                transform: rotateX(-15deg) rotateY(-380deg) translateZ(-100px);
+      }
+    }
+
+    @keyframes around {
+      100% {
+        -webkit-transform: rotateX(-15deg) rotateY(-380deg) translateZ(-100px);
+        transform: rotateX(-15deg) rotateY(-380deg) translateZ(-100px);
+      }
+    }
+</style>
+
+<div class="cube_container">
+	  <div class="cube">
+	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
+	    <div class="back"><a onclick="back2top()" rel="nofollow"> ❤️ </a></div>
+	    <div class="right"><a onclick="back2top()" rel="nofollow"> 北宸小站 </a></div>
+	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 请多关照 </a></div>
+	    <div class="top"><a href="https://github.com/leafjame/hexo-theme-next5-leaf" target="_blank" rel="nofollow"> ❤️ </a></div>
+	    <div class="bottom"><a href="https://github.com/leafjame/hexo-theme-next5-leaf" target="_blank" rel="nofollow"> ❤️ </a></div>
+	  </div>
+</div>
+
+<script>
+
+  function back2top(){
+    $('html, body').animate({scrollTop: 0}, 500);
+  }
+
+</script>
+
+   
+
+
+<!-- Console 输出第三方个性化字体 -->
+
+  <script async type="text/javascript" src="/figlet/fetch.min.js"></script>
+  <script type="text/javascript" src="/figlet/figlet.js"></script>
+  <script type="text/javascript">
+
+      figlet.defaults({fontPath: "/figlet/fonts"});
+      figlet("Welcome To Leaface", "Big Money-ne", function(err, text) {
+          if (err) {
+              console.log("something went wrong...");
+              console.dir(err);
+              return;
+          }
+          console.log(text);
+      });
+  </script>
+
+
+  <!-- Console 输出自定义字体 -->
+  
+    <script async type="text/javascript">
+        var text = "Welcome To Leaface";
+        var date = '2021-06-16';
+        console.log("%c " + text, "font-size:100px;color:white;border-radius:20px;height:200px; background:-webkit-linear-gradient(yellow,orange,red,green,blue,purple);text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);");
+        console.info('\n' + ' %c Leafae Site %c https://www.liaofuzhan.com ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+        console.info('\n' + ' %c Leafae QQ %c 793458585 ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+        console.info('\n' + ' %c Leafae Wechat %c leaface ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+       // console.log("%c Time: " + date, "font-size:100px;white:"+fcolor+";border-radius:20px;height:200px; background:-webkit-linear-gradient(yellow,orange,red,green,blue,purple);text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);  background-image: linear-gradient(to right, orangered, orange, gold, lightgreen, cyan, dodgerblue, mediumpurple, hotpink, orangered);");
+       // console.log("%c .", "padding:300px 600px;line-height:10px;background:url(https://s2.ax1x.com/2019/10/17/KkoAJJ.md.png) no-repeat;");
+    </script>
+  
+
+
+  <!-- 看板娘 -->
+  
+      <script async src="/live2d-widget/autoload.js"></script>
+  
+
+  
+      <!-- aplayer音频播放 -->
+      <link rel="stylesheet" href="/dist/APlayer.min.css">
+      <div id="aplayer"></div>
+      <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+      <script type="text/javascript" src="/dist/music.js"></script>
+  
+
+  
+
+  <!-- 代码块复制功能 -->
+  <script async type="text/javascript" src="/js/src/clipboard.min.js"></script>
+  <script async type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
+  <!--share.js-->
+  <link async rel="stylesheet" href="/sharejs/css/share.min.css">
+  <script async src="/sharejs/js/social-share.min.js"></script>
+
+  <!-- 模仿知乎卡片样式链接、崩溃欺骗特效 -->
+  <script async type="text/javascript" src="/js/src/linkcard.js"></script>
+
+  <!--崩溃欺骗 放在js文件最后-->
+  <!--
+  <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+  -->
+
+ 
+    <script src="https://player.lmih.cn/player/js/player.js" id="myhk" key="158711254641" m="1"></script>
+ 
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 </html>
